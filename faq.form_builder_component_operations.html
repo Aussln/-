@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="For more details or technical help, click the Help in the top-right corner of the pop-up window">
+<meta name="keywords" content=" form builder, operations, components, only, display, hide, show, response, configure, previous">
+<title>Form Builder - Component Operations | Orbis CRM FAQ</title>
+<link rel="stylesheet" href="css/syntax.css">
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">-->
+<link rel="stylesheet" href="css/modern-business.css">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="css/customstyles.css">
+<link rel="stylesheet" href="css/boxshadowproperties.css">
+<!-- most color styles are extracted out to here -->
+<link rel="stylesheet" href="css/theme-blue.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="js/jquery.navgoco.min.js"></script>
+
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!-- Anchor.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js"></script>
+<script src="js/toc.js"></script>
+<script src="js/customscripts.js"></script>
+
+<link rel="shortcut icon" href="images/favicon.ico">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="documentation-theme-jekyll" href="http://localhost:4000/feed.xml">
+
+    <script>
+        $(document).ready(function() {
+            // Initialize navgoco with default options
+            $("#mysidebar").navgoco({
+                caretHtml: '',
+                accordion: true,
+                openClass: 'active', // open
+                save: false, // leave false or nav highlighting doesn't work right
+                cookie: {
+                    name: 'navgoco',
+                    expires: false,
+                    path: '/'
+                },
+                slide: {
+                    duration: 400,
+                    easing: 'swing'
+                }
+            });
+
+            $("#collapseAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', false);
+            });
+
+            $("#expandAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', true);
+            });
+
+        });
+
+    </script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    <script>
+        $(document).ready(function() {
+            $("#tg-sb-link").click(function() {
+                $("#tg-sb-sidebar").toggle();
+                $("#tg-sb-content").toggleClass('col-md-9');
+                $("#tg-sb-content").toggleClass('col-md-12');
+                $("#tg-sb-icon").toggleClass('fa-toggle-on');
+                $("#tg-sb-icon").toggleClass('fa-toggle-off');
+            });
+        });
+    </script>
+    
+
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-static-top" style="background-color: #3b4650">
+    <div class="container topnavlinks">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="faq.html">
+                <img src="images/orbis_advisors_logo.png" style="height: 100%">
+<!--                <span class="projectTitle"> Orbis CRM FAQ</span>-->
+            </a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- toggle sidebar button -->
+                <li><a id="tg-sb-link" href="#">Sidebar <i id="tg-sb-icon" class="fa fa-toggle-on"></i></a></li>
+                <!-- entries without drop-downs appear here -->
+
+
+
+
+                
+                
+                
+                <li><a href="https://crm.orbisadvisors.com.au/" target="_blank" rel="noopener">Orbis CRM</a></li>
+                
+                
+                
+                <li><a href="https://orbisadvisors.com.au/home/" target="_blank" rel="noopener">Orbis Home</a></li>
+                
+                
+                
+                <!-- entries with drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                
+
+                <!--comment out this block if you want to hide search-->
+                <li>
+                    <!--start search-->
+                    <div id="search-demo-container">
+                        <input type="text" id="search-input" placeholder="Type keywords to find answers">
+                        <ul id="results-container"></ul>
+                    </div>
+                    <script src="js/jekyll-search.js" type="text/javascript"></script>
+                    <script type="text/javascript">
+                            SimpleJekyllSearch.init({
+                                searchInput: document.getElementById('search-input'),
+                                resultsContainer: document.getElementById('results-container'),
+                                dataSource: 'search.json',
+                                searchResultTemplate: '<li><a href="{url}" title="Form Builder - Component Operations">{title}</a></li>',
+                    noResultsText: 'No results found.',
+                            limit: 10,
+                            fuzzy: true,
+                    })
+                    </script>
+                    <!--end search-->
+                </li>
+            </ul>
+        </div>
+        </div>
+        <!-- /.container -->
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+  <div id="main">
+    <!-- Content Row -->
+    <div class="row">
+        
+        
+            <!-- Sidebar Column -->
+            <div class="col-md-3" id="tg-sb-sidebar">
+                
+
+<ul id="mysidebar" class="nav">
+  <li class="sidebarTitle">Orbis CRM FAQ 3.0</li>
+  
+  
+  
+      
+  
+  <li>
+      <a title="Overview" href="#">Overview</a>
+      <ul>
+          
+          
+          
+          <li><a title="Get started" href="faq.html">Get started</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Features" href="#">Features</a>
+      <ul>
+          
+          
+          
+          <li><a title="Dashboard / Report" href="faq.dashboard_report.html">Dashboard / Report</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Calendar" href="faq.calendar.html">Calendar</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Leads" href="faq.leads.html">Leads</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Enquiries / Registered Clients" href="faq.enquiries_clients.html">Enquiries / Registered Clients</a></li>
+          
+          
+          
+          <li class="subfolders">
+              <a title="Application" href="#">Application</a>
+              <ul>
+                  
+                  
+                  
+                  <li><a title="Overview" href="faq.applications.html">Overview</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="Progress" href="faq.applications_progress.html">Progress</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="Form" href="faq.applications_form.html">Form</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="Note" href="faq.applications_note.html">Note</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="Invoices" href="faq.applications_invoices.html">Invoices</a></li>
+                  
+                  
+                  
+              </ul>
+          </li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Email" href="faq.email.html">Email</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Visa Type / Framework" href="faq.visa_type_framework.html">Visa Type / Framework</a></li>
+          
+          
+          
+          <li class="subfolders">
+              <a title="Forms" href="#">Forms</a>
+              <ul>
+                  
+                  
+                  
+                  <li><a title="Forms Overview" href="faq.forms_overview.html">Forms Overview</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="active"><a title="Component Opeartions" href="faq.form_builder_component_operations.html">Component Opeartions</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="Data Components" href="faq.form_builder_data.html">Data Components</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li><a title="File Components" href="faq.form_builder_file.html">File Components</a></li>
+                  
+                  
+                  
+              </ul>
+          </li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Staff Management" href="faq.staff_management.html">Staff Management</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+      
+      <!-- if you aren't using the accordion, uncomment this block:
+         <p class="external">
+             <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+         </p>
+         -->
+</ul>
+
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+            </div>
+            
+        
+
+        <!-- Content Column -->
+        <div class="col-md-9" id="tg-sb-content">
+            <div class="post-header">
+   <h1 class="post-title-main">Form Builder - Component Operations</h1>
+</div>
+
+
+
+<div class="post-content">
+    
+    <div class="summary">For more details or technical help, click the <b><a href="https://help.form.io/userguide/" target="_blank">Help</a></b> in the top-right corner of the pop-up window</div>
+    
+
+    
+
+
+<!--    -->
+
+<!--    <a target="_blank" rel="noopener" href="https://github.com/tomjoht/documentation-theme-jekyll/blob/gh-pages/pages/orbiscrm.faq/faq.form_builder_component_operations.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>-->
+
+<!--    -->
+
+   <div class="panel-group" id="accordion">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a class="noCrossRef accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#how-do-i-add-a-component-in-a-form">
+                    How do I add a component in a form?
+                </a>
+            </h4>
+        </div>
+        <div id="how-do-i-add-a-component-in-a-form" class="panel-collapse collapse noCrossRef">
+            <div class="panel-body">
+                <ol>
+                    <li>Navigate to the specific <b>Component</b> from the left sidebar</li>
+                    <li><b>Drag</b> and <b>Drop</b> the component to the satisfied area</li>
+                    <li>Do more detailed edition for the component in the pop-up window</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <!-- /.panel -->
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a class="noCrossRef accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#how-do-i-duplicate-a-component-in-a-form">
+                    How do I duplicate(/copy &amp; paste) a component in a form?
+                </a>
+            </h4>
+        </div>
+        <div id="how-do-i-duplicate-a-component-in-a-form" class="panel-collapse collapse noCrossRef">
+            <div class="panel-body">
+                <ol>
+                    <li>When you are adding or editing a form</li>
+                    <li>Hover the mouse to the specific <b>Component</b></li>
+                    <li>Click the <b>(Copy)</b> <img src="images/copy_icon.png" style="width: 3%" /> icon</li>
+                    <li>Click the <b>(Paste Below)</b> <img src="images/paste_below_icon.png" style="width: 3%" /> icon</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <!-- /.panel -->
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a class="noCrossRef accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#how-do-i-make-a-component-required">
+                    How do I make a component become compulsory/required/unique?
+                </a>
+            </h4>
+        </div>
+        <div id="how-do-i-make-a-component-required" class="panel-collapse collapse noCrossRef">
+            <div class="panel-body">
+                To be added...
+            </div>
+        </div>
+    </div>
+    <!-- /.panel -->
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a class="noCrossRef accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#how-do-i-change-a-component-display-logic">
+                    How do I configure a question to only display based on a user’s response to a previous question?
+                </a>
+            </h4>
+        </div>
+        <div id="how-do-i-change-a-component-display-logic" class="panel-collapse collapse noCrossRef">
+            <div class="panel-body">
+                <ol>
+                    <li>
+                        When you want to configure a component <span style="font-style: italic; color: dodgerblue">(E.g. His/her name?)</span> to display based 
+                        on the response to a previous radio component <span style="font-style: italic; color: red">(E.g. Are you married?)</span><br />
+                        <img src="images/form_builder/radio.png" />
+                    </li>
+                    <li>
+                        Firstly, drag and drop a radio component and rename the label in the <b>Display</b> section                      
+                    </li>
+                    <li>
+                        Navigate to the <b>Data</b> &gt; <b>Values</b> section in the pop-up window
+                    </li>
+                    <li>
+                        Fill in the <b>LABEL</b> and <b>VALUE</b> section
+                        <span style="font-style: italic">(E.g. Yes(yes); No(no))</span>
+                    </li>
+                    <li>
+                        Click【<b>Save</b>】button to save this radio component
+                    </li>
+                    <li>
+                        Then, drag and drop a <b>Text Field</b> component
+                        <img src="/images/form_builder/text-field-display.png" />
+                    </li>
+                    <li>
+                        Rename the label to <span style="font-style: italic; color: dodgerblue">"His/her name?"</span> in the <b>Display</b> section
+                    </li>
+                    <li>
+                        Tick the checkbox of <b>Hidden</b>
+                    </li>
+                    <li>
+                        Navigate to the <b>Logic</b> section
+                        <img src="images/form_builder/text-field-logic.png" />
+                    </li>
+                    <li>Click the【<b>+ Add Logic</b>】button</li>
+                    <li>Type in a proper <b>Logic Name</b> for reference (E.g. <span style="font-style: italic">Logic-1</span>)</li>
+                    <li>Navigate to the <b>Trigger</b> section
+                        <ol>
+                            <li><b>Type</b> &gt; <b style="color:red">Simple</b></li>
+                            <li><b>When the component from</b> &gt; <b style="color:red">Are you married? (radio1)</b></li>
+                            <li><b>Has the value:</b> &gt; <b style="color:red">yes</b></li>
+                        </ol>
+                    </li>
+                    <li>Navigate to the <b>Actions</b> section
+                    <li>Click the【<b>+ Add Action</b>】button</li>
+                        <ol>
+                            <li>Type in a proper <b>Action Name</b> (E.g. <span style="font-style: italic">Action-1</span>)</li>
+                            <li><b>Type</b> &gt; <b style="color:red">Property</b></li>
+                            <li><b>Component Property</b> &gt; <b style="color:red">Hidden</b></li>
+                            <li><b>Set State</b> &gt; <b style="color:red">False</b></li>
+                        </ol>
+                    </li>
+                    <li>Click the【Save Action】button</li>
+                    <li>Click the【Save Logic】button</li>
+                    <li>Click the【Save】button</li>
+                    <li>Finally, test it after saving the form<br />
+                        <ul>
+                            <li>
+                                <img src="images/form_builder/no-for-hidden.png" /><br />
+                                <span style="font-style: italic; font-size: smaller">Example: No for hidden</span>
+                            </li>
+                            <li>
+                                <img src="images/form_builder/yes-for-shown.png" /><br />
+                                <span style="font-style: italic; font-size: smaller">Example: Yes for shown</span>
+                            </li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <!-- /.panel -->
+</div>
+<!-- /.panel-group -->
+
+
+
+<!--    <div class="tags">-->
+<!--        -->
+<!--    </div>-->
+
+</div>
+
+<hr class="shaded"/>
+
+<footer>
+    <div class="row">
+        <div class="col-lg-12 footer">
+            <div class="row">
+            Copyright © 2018 <b>ORBIS ADVISORS</b><br />
+            <p><img src="images/orbis_advisors_logo.png" width="170" alt="ORBIS ADVISORS LOGO"/></p>
+            </div>
+        </div>
+    </div>
+</footer>
+        </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
+</div>
+<!-- /#main -->
+    </div>
+
+</body>
+
+<!-- the google_analytics_id gets auto inserted from the config file -->
+
+
+
+<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-66296557-1','auto');ga('require','displayfeatures');ga('send','pageview');</script>
+
+
+</html>
